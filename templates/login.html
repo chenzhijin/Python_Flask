@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block tilte %}
+    登录页面
+{% endblock %}
+
+
+{% block head %}
+
+{% endblock %}
+
+
+{% block main %}
+    <h1>这是登录页面</h1>
+
+    <hr>
+        {% if user and  user.age > 18 %}
+            <a href="#">{{user.用户}}</a>
+            <a href="#">注销</a>
+            #字典for循环可以使用dict.keys(),dict.values(),dict.items(),dict.iterkeys(),dict.itervalues(),dict.iteritems()
+            {% for k,v in user.items() %}
+                <p>{{ k }}:{{ v }}</p>
+            {% endfor %}
+        {% else %}
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+        {% endif %}
+    <hr>
+{% endblock %}

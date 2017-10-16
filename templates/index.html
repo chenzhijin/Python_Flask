@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block tilte %}
+    首页
+{% endblock %}
+
+
+{% block head %}
+    <style></style>
+    <link rel="stylesheet" href="#">
+    <script></script>
+{% endblock %}
+
+
+{% block main %}
+
+    <p>用户名：{{username}}</p>
+    <p>学校：{{school}}</p>
+    <p>QQ：{{QQ}}</p>
+    <img src = "{{ picture | default('https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1762973822,121126736&fm=27&gp=0.jpg')}}" alt = "">
+    <hr>
+    <p>百度：{{websites['baidu']}}</p>
+    <p>谷歌：{{websites['google']}}</p>
+    <hr>
+{% endblock %}

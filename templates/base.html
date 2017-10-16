@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block tilte %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <script src="{{url_for('static',filename='js/index.js')}}"></script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <a href="{{url_for('login')}}">登录</a>
+    <img src="{{url_for('static',filename='images/huahsi.png')}}" alt="">
+    <div class="nav">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">发布问答</a></li>
+        </ul>
+    </div>
+    {% block main %}{% endblock %}
+</body>
+</html>
